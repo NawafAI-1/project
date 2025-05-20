@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "Welcome to the Smart File Organizer"
+read -p "Please enter the full path of the folder you want to organize: " target
+
+# تحقق من صلاحية المجلد
+if [ ! -d "$target" ]; then
+  echo "Error: The path '$target' is not a valid directory."
+  exit 1
+fi
+
+echo "Organizing files in: $target"
+
+# إنشاء المجلدات الفرعية
+mkdir -p "$target/Images"
+mkdir -p "$target/Documents"
+mkdir -p "$target/Videos"
+mkdir -p "$target/Music"
+mkdir -p "$target/Archives"
+mkdir -p "$target/Others"
+
+# نقل الصور
+find "$target" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -exec mv {} "$target/Images/" \;
+
+# نقل المستندات
+find "$target" -maxdepth 1 -type f \( -iname "*.pdf" -o -iname "*.docx" -o -iname "*.txt" \) -exec mv {} "$target/Documents/" \;
+
+# نقل الفيديوهات
+find "$target" -maxdepth 1 -type f \( -iname "*.mp4" -o -iname "*.mkv" \) -exec mv {} "$target/Videos/" \;
+
+# نقل الموسيقى
+find "$target" -maxdepth 1 -type f \( -iname "*.mp3" -o -iname "*.wav" -o -iname "*.m4a" \) -exec mv {} "$target/Music/" \;
+
+# نقل الملفات المضغوطة
+find "$target" -maxdepth 1 -type f \( -iname "*.zip" -o -iname "*.tar.gz" \) -exec mv {} "$target/Archives/" \;
+
+# الملفات الأخرى
+find "$target" -maxdepth 1 -type f -exec mv {} "$target/Others/" \;
+
+echo "Done. Your files have been organized."
