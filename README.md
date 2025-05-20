@@ -4,15 +4,15 @@ A simple Bash script that automatically organizes files in a folder into categor
 
 ---
 
-##  Features
+## 📌 Features
 
 - Automatically detects and moves:
-  - Images ('.jpg', '.jpeg', '.png')
-  -  Documents ('.pdf', '.docx', '.txt')
-  -  Videos ('.mp4', '.mkv')
-  -  Music ('.mp3', '.wav', '.m4a')
-  -  Archives ('.zip', '.tar.gz')
-  -  Others (all uncategorized files)
+  - 📷 Images (`.jpg`, `.jpeg`, `.png`)
+  - 📄 Documents (`.pdf`, `.docx`, `.txt`)
+  - 🎞️ Videos (`.mp4`, `.mkv`)
+  - 🎵 Music (`.mp3`, `.wav`, `.m4a`)
+  - 📦 Archives (`.zip`, `.tar.gz`)
+  - 🧩 Others (all uncategorized files)
 
 - Creates subfolders if they don’t exist.
 - Simple and user-friendly CLI interaction.
@@ -20,11 +20,15 @@ A simple Bash script that automatically organizes files in a folder into categor
 
 ---
 
-##  How to Use
+## 💻 How to Use
+
+### Option 1: Using GitHub Repository
 
 1. Open your terminal.
-2. Clone or copy this script into a '.sh' file:
+2. Clone the repository and run the script:
 
-  '''bash
-   git clone Project.txt
-   cd smart-file-organizer
+```bash
+git clone https://github.com/yourusername/smart-file-organizer.git
+cd smart-file-organizer
+chmod +x organizer.sh
+./organizer.sh
