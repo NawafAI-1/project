@@ -24,7 +24,7 @@ A simple Bash script that automatically organizes files in a folder into categor
 
 ## 💻 How to Use
 
-### Option 3: Run Directly from GitHub
+### Run Directly from GitHub
 
 1. Open your terminal.
 2. Download and execute the script from the following URL:
