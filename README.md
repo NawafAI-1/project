@@ -27,8 +27,15 @@ A simple Bash script that automatically organizes files in a folder into categor
 1. Open your terminal.
 2. Clone the repository and run the script:
 
+## 💻 How to Use
+
+### Option 3: Run Directly from GitHub
+
+1. Open your terminal.
+2. Download and execute the script:
+
 ```bash
-git clone https://github.com/yourusername/smart-file-organizer.git
-cd smart-file-organizer
+curl -o organizer.sh https://raw.githubusercontent.com/NawafAI-1/project/003bb25ed7214cc3952712b4447b385891ac324c/Project.txt
 chmod +x organizer.sh
 ./organizer.sh
+
