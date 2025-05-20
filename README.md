@@ -26,5 +26,5 @@ A simple Bash script that automatically organizes files in a folder into categor
 2. Clone or copy this script into a '.sh' file:
 
   '''bash
-   git clone https://github.com/yourusername/smart-file-organizer.git
+   git clone Project.txt
    cd smart-file-organizer
